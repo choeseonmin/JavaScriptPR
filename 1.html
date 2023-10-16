@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        function User(name, age) {
+            this.name = name;              // 위에서 선언한 name, age는 밑에 나올 sayname 함수를 위해 다시 name과 age로 재선언 (재선언? 할 때에 변수명이 바뀌어도 된다고 생각했는데 바꿔서 해보니 안됐음, 처음 선언됐던 이름 그대로 사용해야하나봄)
+            this.age = age;
+            this.sayname = function () {
+                console.log(name, age)      // sayname이라는 함수는 콘솔에 name과 age를 불러와주는 함수이다.
+            }
+        }
+
+        let user1 = new User('mike', 22)
+        let user2 = new User('eun', 25)
+        let user3 = new User('min', 27)
+
+        user2.sayname(); // user2에 할당한 값들을 sayname 함수를 사용해서 정보를 불러오겠다.
+
+        console.log(user1) // 콘솔창에 user1의 값을 불러오겠다.
+    </script>
+</body>
+</html>
