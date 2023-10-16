@@ -7,7 +7,7 @@
 <body>
 
     <script>
-        function User(name, age) {
+        function User(name, age) {         // User라는 함수를 만들 것인데 이 함수는 name과  age라는 값을 받고 sayname이라는 함수를 선언하고 그 값에 name과 age를 넣어주는 함수다.
             this.name = name;              // 위에서 선언한 name, age는 밑에 나올 sayname 함수를 위해 다시 name과 age로 재선언 (재선언? 할 때에 변수명이 바뀌어도 된다고 생각했는데 바꿔서 해보니 안됐음, 처음 선언됐던 이름 그대로 사용해야하나봄)
             this.age = age;
             this.sayname = function () {
@@ -15,13 +15,32 @@
             }
         }
 
-        let user1 = new User('mike', 22)
+        let user1 = new User('min', 27)     // 생성자 함수를 사용해서 값을 할당할 건데 각각 User 함수를 사용할 것이고
         let user2 = new User('eun', 25)
-        let user3 = new User('min', 27)
+        let user3 = new User('eun2', 26)
 
-        user2.sayname(); // user2에 할당한 값들을 sayname 함수를 사용해서 정보를 불러오겠다.
+        user2.sayname(); // user2에 할당한 값들을 sayname 함수를 사용해서 정보를 불러오겠다. (user2를 sayname함수로 불러온다.)
 
         console.log(user1) // 콘솔창에 user1의 값을 불러오겠다.
+
+        function ET (name, address, caryn) {
+            this.name = name;
+            this.address = address;
+            this.caryn = caryn;
+            this.info = function () {
+                console.log(name, address, caryn)
+            }
+        }
+
+        let et1 = new ET('eun', 'masan', 'N')               //생성자 함수를 사용할 때 new [함수]명을 꼭 잊지말 것. new <---- 기억하기
+        let et2 = new ET('min', 'jinju', 'Y')
+        let et3 = new ET('eun2', 'jinhae', 'Y')
+        let et4 = new ET('laura', 'masan', 'dog')
+
+        et4.info();
+
+        console.log(et2)
+
     </script>
 </body>
 </html>
