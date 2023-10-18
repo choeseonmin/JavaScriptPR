@@ -159,7 +159,7 @@ let userList11 = [
 ]
 
 let newUserList = userList11.map((user13,index) => {
-    return Object.assign({}, user13, {
+    return Object.assign({}, user13, { //assign을 이용해서 복제를 할 건데 먼저 빈 객체를 만들고 만든 빈 객체에 user13을 덮고 또 다시 빈 객체를 만든 이후에 id와 isAdult를 추가한다.
         id : index + 1,
         isAdult : user13.age > 19
     })
