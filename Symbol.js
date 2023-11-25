@@ -7,7 +7,7 @@ for (let key in user)     //key는 user안에 있다. 있는 객체들을 반복
 
     console.log(`그의 ${key}은 ${user[key]}`) //${key}는 키 값을 의미하고 ${user[key]}는 프로퍼티를 의미한다
 
-
+ 
 
 const user1 = {
     name : '승은',
