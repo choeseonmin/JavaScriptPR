@@ -13,7 +13,7 @@ const user1 = {
     name : '승은',
     age : 25
 }
-
+ 
 for (let key1 in user1)
     console.log(`그녀의 ${key1}는 ${user1[key1]}`)
 
