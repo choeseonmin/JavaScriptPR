@@ -12,7 +12,7 @@
 //
 // //n과 a를 이미 선언하고 배열 형식으로 소환하면 { name: '선민', age: 27 } 이렇게 출력된다.
 //
-// function makeObj(key, val) {
+// function makeObj(key, val) {  
 //     return {
 //         [key] : val
 //     }
